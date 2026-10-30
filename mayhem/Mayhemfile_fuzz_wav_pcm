@@ -1,0 +1,9 @@
+project: savantenvs/moonshine
+target: fuzz_wav_pcm
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_wav_pcm/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_wav_pcm
+    libfuzzer: true
+    timeout: 5
