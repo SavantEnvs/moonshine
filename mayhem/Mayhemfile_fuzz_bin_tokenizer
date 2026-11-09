@@ -1,0 +1,9 @@
+project: savantenvs/moonshine
+target: fuzz_bin_tokenizer-mined-3bcc8aa
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_bin_tokenizer-mined-3bcc8aa/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_bin_tokenizer
+    libfuzzer: true
+    timeout: 5
